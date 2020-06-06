@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const router = Router();
-const {renderSignupForm, renderSigninForm, signin, signup, logout} = require('../controllers/users.controllers');
+const {renderSignupForm, renderSigninForm, signup, logout, signin} = require('../controllers/users.controllers');
 
 //cuando se registra
 router.get('/users/signup', renderSignupForm);
