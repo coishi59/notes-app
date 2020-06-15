@@ -26,7 +26,6 @@ userCtrl.signup = async (req, res) => {
             }else{
                 const newUser = new User({name, email, password});
                 newUser.password = await newUser.encryptPass(password)
-                console.log(name, email, password)
                 await newUser.save();
                 req.flash('success_msg','You are registered');
                 res.redirect('/users/signin');
@@ -54,3 +53,6 @@ userCtrl.logout = (req, res) => {
 
 
 module.exports = userCtrl;
+
+
+
