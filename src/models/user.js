@@ -20,7 +20,7 @@ const UserSchema = new Schema({
 });
 
 UserSchema.methods.encryptPass = password => {
-    return bcrypt.hash(password.String, 10);
+    return bcrypt.hash(password, 10);
 };
 
 UserSchema.methods.matchPass = async function(password) {

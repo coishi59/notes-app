@@ -48,7 +48,9 @@ userCtrl.signin = passport.authenticate('local', {
 });
 
 userCtrl.logout = (req, res) => {
-    res.send('logout');
+    req.logout();
+    req.flash('success_msg', 'Session finished');
+    res.redirect('/users/signin');
 }
 
 
