@@ -1,1 +1,6 @@
 node_modules
+*.yml
+dockerfile
+keyfile.ppk
+nginx/
+data-volume/

@@ -18,7 +18,8 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <div class="dropdown">
+                {{#if user}} 
+                <li class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Notes
@@ -26,15 +27,17 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/notes">All notes</a>
                         <a class="dropdown-item" href="/notes/add">New note</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
                     </div>
-                </div>
+                </li>
+                {{else}}
                 <li class="nav-item">
                     <a href="/users/signin" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
                     <a href="/users/signup" class="nav-link">Register</a>
                 </li>
+                {{/if}}
             </ul>
         </div>
     </div>
